@@ -13,10 +13,9 @@ This project is a simple text editor that uses a doubly-linked list with sentine
 
 1. Move the cursor left: Type '1' and press Enter.
 2. Move the cursor right: Type '2' and press Enter.
-3. Insert a character 'c' just after the cursor: Type '3 c' and press Enter (replace 'c' with the character you want to insert).
+3. Insert a character 'c' just after the cursor: Type '3' and press Enter. You will then be asked to enter the character 'c' (also possible: whitespace).
 4. Delete the character just after the cursor: Type '4' and press Enter.
 5. Exit the editor: Type '5' and press Enter.
 
 ### Important Notes:
-* For the 'insert' command, use the format '3 x', where x is the character you want to insert.
 * The cursor is represented by the '|' symbol in the text editor.
