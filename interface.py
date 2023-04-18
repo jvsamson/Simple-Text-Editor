@@ -19,10 +19,9 @@ def print_instructions():
     print(" Text Editor Commands:")
     print("1: Move the cursor left")
     print("2: Move the cursor right")
-    print("3 [c]: Insert a character 'c' just after the cursor")
+    print("3: Insert a character just after the cursor")
     print("4: Delete the character just after the cursor")
     print("5: Exit the editor")
-    print("Note: For the 'insert' command, use the format '3 x', where x is the character you want to insert.")
     print("")
 
 
