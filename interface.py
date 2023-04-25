@@ -1,7 +1,11 @@
 """
-Created on Tue Apr 11 21:25:12 2023
+Created on Tue Apr 11 23:25:12 2023
 
-@author: j.v.samson
+@authors:
+- Benedikt Korbach (GitHub: benedikt-korbach)
+- Niklas Pawelzik (GitHub: nikpaw)
+- Justus von Samson-Himmelstjerna (GitHub: jvsamson)
+- Alvaro Guijarro (GitHub: Alvaroguijarro97)
 """
 
 from text_editor import TextEditor
@@ -19,11 +23,10 @@ def print_instructions():
     print(" Text Editor Commands:")
     print("1: Move the cursor left")
     print("2: Move the cursor right")
-    print("3: Insert a character just after the cursor")
+    print("3: Insert characters just after the cursor")
     print("4: Delete the character just after the cursor")
     print("5: Exit the editor")
     print("")
-
 
 editor = TextEditor()
 
@@ -37,11 +40,16 @@ while True:
     elif command == "2":
         editor.move_right()
     elif command == "3":
-        input_character = input("Input character: ")
-        if len(input_character) == 1:
-            editor.insert(input_character)
-        else:
-            print("Invalid command. Please provide one character or a whitespace.")
+        while True:
+            input_characters = input('Input a character or "\\" for a new command: ')
+            if input_characters == "\\":
+                break
+            elif len(input_characters) == 1:
+                editor.insert(input_characters)
+                print(editor)
+                print("")
+            else:
+                print("Invalid input. Please provide one character, a whitespace or '\\' to exit insertion mode.")
     elif command == "4":
         editor.delete()
     elif command == "5":

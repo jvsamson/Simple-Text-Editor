@@ -1,7 +1,11 @@
 """
 Created on Tue Apr 11 2023
 
-@author: j.v.samson
+@authors:
+- Benedikt Korbach (GitHub: benedikt-korbach)
+- Niklas Pawelzik (GitHub: nikpaw)
+- Justus von Samson-Himmelstjerna (GitHub: jvsamson)
+- Alvaro Guijarro (GitHub: Alvaroguijarro97)
 """
 
 class PositionalList:
