@@ -4,7 +4,6 @@ Created on Tue Apr 11 2023
 @author: j.v.samson
 """
 
-
 class PositionalList:
     """A positional list is a container of elements that keeps track of the position of each element.
 

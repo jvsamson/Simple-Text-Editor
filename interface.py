@@ -19,10 +19,9 @@ def print_instructions():
     print(" Text Editor Commands:")
     print("1: Move the cursor left")
     print("2: Move the cursor right")
-    print("3 [c]: Insert a character 'c' just after the cursor")
+    print("3: Insert a character just after the cursor")
     print("4: Delete the character just after the cursor")
     print("5: Exit the editor")
-    print("Note: For the 'insert' command, use the format '3 x', where x is the character you want to insert.")
     print("")
 
 
@@ -31,29 +30,23 @@ editor = TextEditor()
 print_instructions()
 
 while True:
-    user_input = input("Enter a command: ").strip().lower()
-    command_parts = user_input.split()
-
-    if len(command_parts) == 0:
-        print("Invalid command. Please try again.")
-        continue
-
-    command = command_parts[0]
+    command = input("Enter a command: ")
 
     if command == "1":
         editor.move_left()
     elif command == "2":
         editor.move_right()
     elif command == "3":
-        if len(command_parts) == 2:
-            editor.insert(command_parts[1])
+        input_character = input("Input character: ")
+        if len(input_character) == 1:
+            editor.insert(input_character)
         else:
-            print("Invalid format for the 'insert' command. Use the format 'insert x', where x is the character you want to insert.")
+            print("Invalid command. Please provide one character or a whitespace.")
     elif command == "4":
         editor.delete()
     elif command == "5":
         break
-    elif command_parts[0] == '99':
+    elif command == '99':
             print("")
             print("Maintenance:")
             cursor_position = editor.get_cursor_position()

@@ -43,6 +43,8 @@ class TextEditor:
         """Delete the character just after the cursor."""
         if self._cursor_pos < len(self._text):
             self._text.delete(self._text._getNodeAtPosition(self._cursor_pos))
+        else:
+            print("The cursor is already at the end of the list. No deletion is executed")
 
     def __str__(self):
         """Return the string representation of the text in the editor."""
