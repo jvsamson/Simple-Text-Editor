@@ -36,7 +36,7 @@ class TextEditor:
             node = self._text._header
         else:
             node = self._text._getNodeAtPosition(self._cursor_pos - 1)
-        new_node = self._text._insert_between(character, node, node._nxt)
+        #new_node = self._text._insert_between(character, node, node._nxt)
         self._cursor_pos += 1
 
     def delete(self):
